@@ -29,11 +29,11 @@ public class CsvToJsonConverter {
             }
             br.close();
 
-            // Convert to JSON
+            
             Gson gson = new GsonBuilder().setPrettyPrinting().create();
             String json = gson.toJson(stockList);
 
-            // Write JSON to file
+            
             FileWriter writer = new FileWriter(outputFile);
             writer.write(json);
             writer.close();
